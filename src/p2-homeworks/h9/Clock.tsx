@@ -42,8 +42,8 @@ function Clock() {
                 </div>
             )}
 
-            <SuperButton onClick={start}>start</SuperButton>
-            <SuperButton onClick={stop}>stop</SuperButton>
+            <SuperButton title={'start'} onClick={start}/>
+            <SuperButton title={'stop'} onClick={stop}/>
 
         </div>
     );

@@ -30,7 +30,7 @@ function HW8() {
             {/*should work (должно работать)*/}
 
             {finalPeople}
-            <div><SuperButton onClick={sortUp}>sort up</SuperButton></div>
+            <div><SuperButton title={'sort up'} onClick={sortUp}/></div>
             <div>sort down</div>
 
             check 18
