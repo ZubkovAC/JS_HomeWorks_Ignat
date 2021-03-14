@@ -1,10 +1,12 @@
-import React, {ChangeEvent, InputHTMLAttributes, DetailedHTMLProps} from "react";
+import css from './SuperRadio.module.css'
+
+import React, {InputHTMLAttributes, DetailedHTMLProps} from "react";
 
 type DefaultRadioPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
 
 type SuperRadioPropsType = DefaultRadioPropsType & {
     options?: any[]
-    onChangeOption?: (option: any) => void
+    onChangeOption?: (option: string) => void
 }
 
 const SuperRadio: React.FC<SuperRadioPropsType> = (
@@ -15,25 +17,46 @@ const SuperRadio: React.FC<SuperRadioPropsType> = (
         ...restProps
     }
 ) => {
-    const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
-        // onChange, onChangeOption
+
+
+    const onChangeCallback = (value: string) => {
+
+        onChangeOption &&
+        onChangeOption(value)
     }
 
 
-    const mappedOptions: any[] = options ? options.map((o, i) => ( // map options with key
-        <label key={name + "-" + i}>
-            <input
-                type={"radio"}
-                // name, checked, value, onChange
-            />
-            {o}
-        </label>
-    )) : [];
+    const mappedOptions = options ? options.map((opt, i) => { // map options with key
+
+        return  <li>
+                    <label  key={opt.i}>
+
+                        <input
+                            type={"radio"}
+                            name={opt}
+                            checked={value === opt}
+                            onChange={() => onChangeCallback(opt)}
+                            value={value}
+
+
+                            id="f-option"
+                            //name="selector"
+                        />
+                        <span className={css.check}></span>
+                        {opt}
+                    </label>
+                </li>
+    }) : [];
 
     return (
-        <>
-            {mappedOptions}
-        </>
+            <div className={css.container}>
+                <div className={css.red}>
+                </div>
+                <ol>
+                    {mappedOptions}
+                </ol>
+            </div>
+
     );
 }
 
