@@ -1,0 +1,21 @@
+.Clock{
+  height: 300px;
+  border: 3px solid antiquewhite;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.8;
+}
+.Clock:hover{
+  text-shadow: 0 0 20px 20px wheat;
+}
+.Clock_table{
+  padding: 20px;
+}
+.Clock_table:hover{
+  text-shadow: 0 0 10px  wheat;
+}
+.date:hover{
+  text-shadow: 0 0 20px wheat;
+}

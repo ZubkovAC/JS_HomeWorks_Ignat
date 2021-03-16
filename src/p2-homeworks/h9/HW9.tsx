@@ -1,19 +1,21 @@
 import React from "react";
-import Clock from "./Clock";
+import {Clock2} from "./Clock";
+
 
 function HW9() {
     return (
-        <div>
+        <div style={{width:'300px'}}>
             <hr/>
             homeworks 9
 
             {/*should work (должно работать)*/}
-            <Clock/>
+            <Clock2 />
+          {/* <MyApp  />*/}
 
-            <hr/>
+
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativeClock/>*/}
-            <hr/>
+
         </div>
     );
 }
