@@ -52,10 +52,8 @@ export function Clock2() {
                 )}
             </div>
 
-
             <SuperButton title={'start'} onClick={start}/>
             <SuperButton title={'stop'} onClick={stop}/>
-
 
         </div>
     );

@@ -1,14 +1,31 @@
 import React from "react";
 import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
+import {useDispatch, useSelector} from "react-redux";
+import {AppStoreType} from "./bll/store";
+import {completedAC, loadingAC} from "./bll/loadingReducer";
+
+// @ts-ignore
+import { WindMillLoading } from 'react-loadingg'
+// @ts-ignore
+import { BoxLoading } from 'react-loadingg';
 
 function HW10() {
-    // useSelector, useDispatch
-    const loading = false;
+
+    const dispatch = useDispatch()
+
+    const loading = useSelector<AppStoreType>(state => state.loading.loading)
 
     const setLoading = () => {
-        // dispatch
-        // setTimeout
-        console.log("loading...");
+        dispatch(loadingAC(true))
+
+        const off =()=>{
+            dispatch(completedAC(false))
+        }
+
+        setTimeout(off,5000)
+        // dispatch - true
+        // setTimeout -3000 false
+
     };
 
     return (
@@ -19,20 +36,30 @@ function HW10() {
             {/*should work (должно работать)*/}
             {loading
                 ? (
-                    <div>крутилка...</div>
-                ) : (
                     <div>
-                        <SuperButton title={'set loading...'} onClick={setLoading}/>
+                        <WindMillLoading color={'papayawhip'}/>
+                        </div>
+                )
+                : (
+                    <div>
+                        <SuperButton title={'set loading'} onClick={setLoading}/>
                     </div>
                 )
             }
 
-            <hr/>
+
             {/*для личного творчества, могу проверить*/}
             {/*<Alternative/>*/}
-            <hr/>
+
         </div>
     );
 }
 
 export default HW10;
+
+/*
+
+- initialState = {loading: false}
+    - case "SET_LOADING": return {...state, loading: action.loading}
+    - если loading === true - показывать компоненту-крутилку загрузки(сделать), иначе показывать ваш проект
+- добавить на странице Junior кнопку, которая изменит loading на true и запустит setTimeout, который через 3 секунды изменит loading на false*/
