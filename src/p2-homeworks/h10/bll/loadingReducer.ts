@@ -29,3 +29,28 @@ export const completedAC = (COMPLETED:boolean)  => ({type:'COMPLETED',COMPLETED}
 export type CompletedAC = ReturnType<typeof completedAC>
 
 
+
+
+
+const initilStateColor ={
+    theme:'some'
+}
+
+export type InitialColorStateType = typeof initilStateColor
+
+export const colorReducer = ( state = initilStateColor , action:ActionColorType): InitialColorStateType =>{
+    switch (action.type) {
+        case "CHANGE-COLOR":{
+            return {...state,theme: action.color}
+        }
+        default:
+            return state
+
+    }
+}
+
+export const colorAC = (color:string) =>({type:'CHANGE-COLOR',color}as const )
+
+export type ColorAC = ReturnType<typeof colorAC>
+
+export type ActionColorType = ColorAC

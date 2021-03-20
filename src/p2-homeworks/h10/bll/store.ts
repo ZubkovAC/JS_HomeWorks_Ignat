@@ -1,8 +1,9 @@
-import {loadingReducer} from "./loadingReducer";
+import {loadingReducer, colorReducer} from "./loadingReducer";
 import { combineReducers, createStore} from "redux";
 
 const reducers = combineReducers({
     loading: loadingReducer,
+    color:colorReducer,
 
 });
 
