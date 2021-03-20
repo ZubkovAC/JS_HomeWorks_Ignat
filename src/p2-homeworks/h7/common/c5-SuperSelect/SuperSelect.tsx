@@ -35,8 +35,6 @@ const SuperSelect: React.FC<SuperSelectPropsType> = (
 
                     {mappedOptions}
 
-
-
                 </select>
             </div>
 

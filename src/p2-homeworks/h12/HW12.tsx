@@ -4,7 +4,7 @@ import SuperSelect from "../h7/common/c5-SuperSelect/SuperSelect";
 import SuperRadio from "../h7/common/c6-SuperRadio/SuperRadio";
 import {useDispatch, useSelector} from "react-redux";
 import {AppStoreType} from "../h10/bll/store";
-import {colorAC} from "../h10/bll/loadingReducer";
+import {colorAC} from "./bll/themeReducer";
 
 const themes = ['dark', 'red', 'some'];
 
@@ -36,8 +36,8 @@ function HW12() {
             <SuperRadio
                 value={theme}
                 onChangeOption={onChangeOption}
-                options={themes
-                }/>
+                options={themes}
+            />
             {/*SuperSelect or SuperRadio*/}
 
             <hr/>
