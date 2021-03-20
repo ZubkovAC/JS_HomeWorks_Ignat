@@ -3,11 +3,7 @@ import React, {useState} from 'react';
 import {Meta, Story} from '@storybook/react/types-6-0';
 import SuperSelect from "../../h7/common/c5-SuperSelect/SuperSelect";
 import {ReduxStoreProviderDecorator} from "./ReduxStoreProviderDecorator";
-import {useDispatch, useSelector} from "react-redux";
-import {AppStoreType} from "../../h10/bll/store";
-import {colorAC} from "./themeReducer";
 import s from "../HW12.module.css";
-import SuperRadio from "../../h7/common/c6-SuperRadio/SuperRadio";
 
 
 export default {

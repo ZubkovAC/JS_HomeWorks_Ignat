@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import s from "./HW12.module.css";
 import SuperSelect from "../h7/common/c5-SuperSelect/SuperSelect";
 import SuperRadio from "../h7/common/c6-SuperRadio/SuperRadio";
@@ -16,9 +16,6 @@ function HW12() {
         dispatch(colorAC(color))
     }
 
-
-    // const [value, onChangeOption] = useState(theme);
-    // useDispatch, onChangeCallback
 
     return (
         <div className={s[theme]}>
