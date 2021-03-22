@@ -1,9 +1,10 @@
 import React from "react";
+import {HW13} from "../../h13/HW13";
 
 export const JuniorPlus = () => {
     return(
         <div style={{color:'white'}}>
-            <h2>Hello!!!HELLO!!!</h2>
+            <HW13/>
         </div>
     )
 }
