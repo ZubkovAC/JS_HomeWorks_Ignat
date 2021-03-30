@@ -38,11 +38,12 @@ function HW10() {
                 ? (
                     <div>
                         <WindMillLoading color={'papayawhip'}/>
-                        </div>
+                        <p>отображение на верху</p>
+                    </div>
                 )
                 : (
                     <div>
-                        <SuperButton title={'set loading'} onClick={setLoading}/>
+                        <SuperButton title={'set loading'} onClickButon={setLoading}/>
                     </div>
                 )
             }

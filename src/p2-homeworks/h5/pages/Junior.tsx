@@ -7,15 +7,32 @@ import HW11 from "../../h11/HW11";
 import HW12 from "../../h12/HW12";
 
 export const Junior = () => {
-    return(
-        <div style={{color:'white',display:'flex',justifyContent:'center',alignItems:'center'}}>
+    return (
+        <div  >
+            <div style={{color: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                <HW7/>
+            </div>
 
-            {/*<HW7/>*/}
-            {/*<HW8/>*/}
-            {/*<HW9/>*/}
-            {/*<HW10/>*/}
-            {/*<HW11/>*/}
-            <HW12/>
+            <div style={{color: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                <HW8/>
+            </div>
+
+            <div style={{color: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                <HW9/>
+            </div>
+
+            <div style={{color: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                <HW10/>
+            </div>
+
+            <div style={{color: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                <HW11/>
+            </div>
+
+            <div style={{color: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                <HW12/>
+            </div>
+
 
         </div>
     )

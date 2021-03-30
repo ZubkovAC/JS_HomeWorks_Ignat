@@ -7,7 +7,7 @@ import HW6 from "../../h6/HW6";
 
 function PreJunior() {
     return (
-        <div style={{color:'white'}}>
+        <div style={{color:'white',display:'flex',justifyContent:'center'}} >
          {/*   <HW1/>
             <HW2/>
             <HW3/>*/}

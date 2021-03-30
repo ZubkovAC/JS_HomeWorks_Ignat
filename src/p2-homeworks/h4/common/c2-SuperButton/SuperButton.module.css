@@ -36,3 +36,11 @@
     font-weight: 800;
     margin: 10px;
 }
+.buttonErrorFalse span{
+    background-color: azure;
+    text-shadow: 0 0 10px crimson;
+}
+.buttonErrorTrue span {
+    background-color: white;
+    text-shadow: 0 0 10px white;
+}

@@ -7,6 +7,7 @@ type homeWorkReducerType = {
 export const homeWorkReducer = (state: homeWorkReducerType[], action: ActionType): homeWorkReducerType[] => {
     switch (action.type) {
         case "sort": {
+            debugger
             let copy = [...state]
             if (action.payload === "up"){
                 copy.sort(function (a, b) {

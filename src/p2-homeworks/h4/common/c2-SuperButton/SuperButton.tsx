@@ -9,7 +9,6 @@ type SuperButtonPropsType = DefaultButtonPropsType & {
     title?:string
     onClickButon?: () => void
     onChange?:any
-
 }
 
 const SuperButton: React.FC<SuperButtonPropsType> = (
@@ -32,7 +31,7 @@ const SuperButton: React.FC<SuperButtonPropsType> = (
             //className={finalClassName}
             {...restProps} // отдаём кнопке остальные пропсы если они есть (children там внутри)
             onClick={onClick}
-        >{title}</button>
+        ><span>{title}</span></button>
     );
 }
 
