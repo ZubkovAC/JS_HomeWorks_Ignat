@@ -67,11 +67,11 @@ function HW4() {
                 {/*should work (должно работать)*/}
 
 
-                <SuperButton   title={'delete'} red  onClick={showAlert}  >
+                <SuperButton   title={'delete'} boolean  onClick={showAlert}  >
                 </SuperButton>
 
 
-                <SuperButton  red={false}
+                <SuperButton  boolean={false}
                     onClick={showAlert}  title={'delete'}
                 >
                     delete {/*// название кнопки попадёт в children*/}
@@ -80,7 +80,7 @@ function HW4() {
 
                 <SuperButton title={'disabled'}
                     disabled={true}
-                    red
+                             boolean
                 >
                    disabled {/*// название кнопки попадёт в children*/}
                 </SuperButton>
